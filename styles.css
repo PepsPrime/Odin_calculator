@@ -1,2 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    align-self: center;
+    justify-self: center;
+}
+
+h1 {
+    text-align: center;
+}
 
 
+
+#container {
+    width: 900px;
+    height: 640px;
+    display: flex;
+    flex-wrap: wrap;
+    outline: solid;
+    
+}
+
+#display {
+    width: 100%;
+    height: 195px;
+    font-size: 48px;
+    align-content: flex-end;
+    text-align: right;
+    outline: 2px solid black;
+    
+}
+
+#inputContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex: 2 2 auto;
+}
+
+
+button {
+    width: 220px;
+    height: 110px;
+    font-size: 32px;
+}
