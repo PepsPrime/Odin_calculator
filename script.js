@@ -1,5 +1,8 @@
 // Four basic operations
 
+let operators = "+*/-"
+let numbers = "0123456789"
+
 function add(a,b) {
     return a+b
 }
@@ -39,4 +42,15 @@ function operate(operator,a,b) {
             
     }
 }
-
+// 
+let btn = document.querySelectorAll("button");
+let displayText = document.querySelector("#display")
+for(i=0; i<btn.length; i++) {
+    btn[i].addEventListener("click", (e) => {
+        let num1,num2;
+        displayText.textContent += e.target.textContent
+        
+        
+        
+    })
+}
