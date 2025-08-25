@@ -2,16 +2,6 @@
     box-sizing: border-box;
   }
 
-body {
-    align-self: center;
-    justify-self: center;
-}
-
-h1 {
-    text-align: center;
-}
-
-
 
 #container {
     width: min(900px, 90vw);
