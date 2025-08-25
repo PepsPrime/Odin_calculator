@@ -51,12 +51,15 @@ function operate(operator,a,b) {
     }
 }
 
-let num1,num2 = null
+let num1 = null;
+let num2 = null;
 let operator = ""
 
 function clearData() {
-    num1,num2 = null;
-    displayText.textContent = "0"
+    num2 = null;
+    num1 = null;
+    operator = "";
+    displayText.textContent = "0";
 }
 
 let btn = document.querySelectorAll("button");
@@ -67,14 +70,36 @@ for(i=0; i<btn.length; i++) {
         let clickedButton = e.target.textContent;
 
         // Check if a number, an operator or the clear button was clicked
-        if (numbers.includes(clickedButton)) {
-            if (displayText.textContent == "0") {
-                displayText.textContent = clickedButton;    
-            } else displayText.textContent += clickedButton;
-            
-        } else if (operators.includes(clickedButton)) {
-            displayText.textContent += clickedButton;
-        } else clearData()
+        switch (clickedButton) {
+            case "0":
+            case "1":    
+            case "2":
+            case "3":
+            case "4":
+            case "5":
+            case "6":
+            case "7":
+            case "8":
+            case "9":
+                if (displayText.textContent == "0") {
+                    displayText.textContent = clickedButton;
+                } else {
+                    displayText.textContent += clickedButton;
+                }
+
+                break
+            case "+":
+            case "-":
+            case "/":
+            case "*":
+            case "=":
+                num1 = Number(displayText.textContent)
+                displayText.textContent += clickedButton;
+                break
+            case "Clear":
+                clearData()
+                break
+        }
         
         
         
